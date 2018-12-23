@@ -48,6 +48,9 @@ TestResult.xml
 [Rr]eleasePS/
 dlldata.c
 
+# Visual Studio Code Config
+.vscode/
+
 # Benchmark Results
 BenchmarkDotNet.Artifacts/
 

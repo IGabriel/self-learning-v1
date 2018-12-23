@@ -1,4 +1,5 @@
 ﻿using System;
+using MyLibrary;
 
 namespace MyConsole
 {
@@ -6,7 +7,10 @@ namespace MyConsole
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Human h1 = new Human("Abc");
+            Human h2 = new Human("bcd");
+
+            Console.WriteLine("H1: {0}; H2： {1}", h1, h2);
         }
     }
 }

@@ -15,5 +15,7 @@ namespace MyLibrary
         public Creature(string name) : this() => Name = name;
 
         protected static int GetNextId() => Interlocked.Increment(ref currentId);
+
+        public override string ToString() => string.Format(ToStringFormat, Id, Name);
     }
 }

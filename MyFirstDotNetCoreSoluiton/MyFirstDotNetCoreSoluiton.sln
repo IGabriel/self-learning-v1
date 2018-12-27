@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyConsole", "MyConsole\MyCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLibrary", "MyLibrary\MyLibrary.csproj", "{90C7C282-4FB3-452D-B56B-E4510778963E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLibrary.Test", "MyLibrary.Test\MyLibrary.Test.csproj", "{C07FCDA8-08A4-495B-A426-9E9F1D196FE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{90C7C282-4FB3-452D-B56B-E4510778963E}.Release|x64.Build.0 = Release|Any CPU
 		{90C7C282-4FB3-452D-B56B-E4510778963E}.Release|x86.ActiveCfg = Release|Any CPU
 		{90C7C282-4FB3-452D-B56B-E4510778963E}.Release|x86.Build.0 = Release|Any CPU
+		{C07FCDA8-08A4-495B-A426-9E9F1D196FE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C07FCDA8-08A4-495B-A426-9E9F1D196FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C07FCDA8-08A4-495B-A426-9E9F1D196FE6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C07FCDA8-08A4-495B-A426-9E9F1D196FE6}.Debug|x64.Build.0 = Debug|Any CPU
+		{C07FCDA8-08A4-495B-A426-9E9F1D196FE6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C07FCDA8-08A4-495B-A426-9E9F1D196FE6}.Debug|x86.Build.0 = Debug|Any CPU
+		{C07FCDA8-08A4-495B-A426-9E9F1D196FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C07FCDA8-08A4-495B-A426-9E9F1D196FE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C07FCDA8-08A4-495B-A426-9E9F1D196FE6}.Release|x64.ActiveCfg = Release|Any CPU
+		{C07FCDA8-08A4-495B-A426-9E9F1D196FE6}.Release|x64.Build.0 = Release|Any CPU
+		{C07FCDA8-08A4-495B-A426-9E9F1D196FE6}.Release|x86.ActiveCfg = Release|Any CPU
+		{C07FCDA8-08A4-495B-A426-9E9F1D196FE6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

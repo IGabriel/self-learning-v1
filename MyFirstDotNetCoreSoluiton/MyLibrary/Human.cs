@@ -10,7 +10,7 @@ namespace MyLibrary
 
         public void Say(string message)
         {
-            Console.WriteLine("Human {0}({1}) is say: {2}", Name, Id, message);
+            Console.WriteLine("Human {0}({1}) is saying: {2}", Name, Id, message);
         }
 
         public override string ToString()

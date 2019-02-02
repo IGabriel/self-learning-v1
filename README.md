@@ -1,4 +1,3 @@
 # self-learning-v1
-self-learning-v1
 
-All my self-learning code here
+Check [Wiki](https://github.com/IGabriel/self-learning-v1/wiki) for more details.

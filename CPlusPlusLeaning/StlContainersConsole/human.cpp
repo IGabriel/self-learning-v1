@@ -39,6 +39,11 @@ creature::human creature::human::operator=(const human& obj)
     return *this;
 }
 
+bool creature::human::operator==(const human& obj) const
+{
+    return name_ == obj.GetName();
+}
+
 creature::human::~human()
 {
     std::cout << "deleting human, id: " << id_ << "; name: " << name_ << std::endl;

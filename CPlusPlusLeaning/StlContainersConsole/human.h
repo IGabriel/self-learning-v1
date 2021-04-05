@@ -19,6 +19,7 @@ namespace creature
         human(const human& obj);
         virtual ~human();
         human operator=(const human& obj);
+        bool operator==(const human& obj) const;
 
         long GetId() const;
         std::string GetName() const;

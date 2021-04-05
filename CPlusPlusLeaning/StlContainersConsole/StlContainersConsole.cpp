@@ -92,6 +92,107 @@ void assignment_test()
     std::cout << "testing assignment operator done!" << std::endl;
 }
 
+std::vector<creature::human> return_vector_by_local_variable()
+{
+    std::vector<creature::human> v;
+
+    std::cout << "creating human instances..." << std::endl;
+    const creature::human felix("felix");
+    const creature::human chen("chen");
+
+    std::cout << "push into vector..." << std::endl;
+    v.push_back(felix);
+    v.push_back(chen);
+
+    std::cout << "return vector..." << std::endl;
+    return v;
+}
+
+void return_vector_deep_copy_elements()
+{
+    std::cout << "testing vector as return value:" << std::endl;
+    auto v = return_vector_by_local_variable();
+
+    std::cout << "showing human info..." << std::endl;
+    for(const creature::human& h : v)
+    {
+        creature::human::show_human_info(h);
+    }
+
+    std::cout << "all done!" << std::endl;
+}
+
+void fill_vectors(std::vector<creature::human>& v)
+{
+    std::cout << "creating human instances..." << std::endl;
+    const creature::human felix("felix");
+    const creature::human chen("chen");
+
+    std::cout << "push into vector..." << std::endl;
+    v.push_back(felix);
+    v.push_back(chen);
+
+    std::cout << "return vector..." << std::endl;
+}
+
+void pass_vector_by_argument()
+{
+    std::vector<creature::human> v;
+
+    std::cout << "testing vector as argument:" << std::endl;
+    fill_vectors(v);
+
+    std::cout << "showing human info..." << std::endl;
+    for (const creature::human& h : v)
+    {
+        creature::human::show_human_info(h);
+    }
+    std::cout << "all done!" << std::endl;
+}
+
+void fill_vectors_by_pointer(std::vector<creature::human>* pV)
+{
+    std::cout << "creating human instances..." << std::endl;
+    const creature::human felix("felix");
+    const creature::human chen("chen");
+
+    std::cout << "push into vector..." << std::endl;
+    pV->push_back(felix);
+    pV->push_back(chen);
+
+    std::cout << "return vector..." << std::endl;
+}
+
+void pass_vector_by_pointer()
+{
+    std::vector<creature::human> v;
+
+    std::cout << "testing vector as pointer:" << std::endl;
+    fill_vectors_by_pointer(&v);
+
+    std::cout << "showing human info..." << std::endl;
+    for (const creature::human& h : v)
+    {
+        creature::human::show_human_info(h);
+    }
+    std::cout << "all done!" << std::endl;
+}
+
+void compare_human()
+{
+    creature::human felix1("felix");
+    creature::human felix2("felix");
+
+    if (felix1 == felix2)
+    {
+        std::cout << "equaled, compare by name." << std::endl;
+    }
+    else
+    {
+        std::cout << "What is going on?!" << std::endl;
+    }
+}
+
 int main()
 {
     //BaseConstructorTest();
@@ -99,10 +200,13 @@ int main()
     //BaseVectorPtrTest();
     
     //BaseVectorSharedPtrTest();
+    //assignment_test();
+    
+    //return_vector_deep_copy_elements();
+    //pass_vector_by_argument();
+    //pass_vector_by_pointer();
 
-    assignment_test();
-
-
+    compare_human();
     return 0;
 }
 

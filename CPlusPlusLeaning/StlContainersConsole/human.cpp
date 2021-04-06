@@ -31,7 +31,7 @@ creature::human::human(const human& obj)
     std::cout << "Copied constructor, id: " << id_ << std::endl;
 }
 
-creature::human creature::human::operator=(const human& obj)
+creature::human& creature::human::operator=(const human& obj)
 {
     std::cout << "assigning." << std::endl;
     deep_copy_from(obj);

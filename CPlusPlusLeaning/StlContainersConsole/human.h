@@ -18,7 +18,7 @@ namespace creature
         human(long id, const std::string& name, int age);
         human(const human& obj);
         virtual ~human();
-        human operator=(const human& obj);
+        human& operator=(const human& obj);
         bool operator==(const human& obj) const;
 
         long GetId() const;

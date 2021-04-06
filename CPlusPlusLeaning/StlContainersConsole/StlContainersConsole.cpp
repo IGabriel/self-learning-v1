@@ -13,8 +13,6 @@ void BaseConstructorTest()
     const creature::human felix("felix");
     const creature::human guan_qing("guan qing");
 
-    std::cout << "OK, let's go..." << std::endl;
-
     std::cout << "Making a empty human..." << std::endl;
     const creature::human empyt;
 
@@ -202,11 +200,11 @@ int main()
     //BaseVectorSharedPtrTest();
     //assignment_test();
     
-    //return_vector_deep_copy_elements();
+    return_vector_deep_copy_elements();
     //pass_vector_by_argument();
     //pass_vector_by_pointer();
 
-    compare_human();
+    //compare_human();
     return 0;
 }
 

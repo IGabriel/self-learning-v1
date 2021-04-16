@@ -33,8 +33,56 @@ void worker_thread()
     cv.notify_one();
 }
 
+#include <list>
+#include <vector>
+#include <set>
+#include <array>
+#include <map>
+#include <memory>
+
+void Test()
+{
+    std::list<int> l;
+    std::vector<int> v;
+
+    std::unique_ptr<int> up = std::make_unique<int>(10);
+    const std::shared_ptr<int> mp = std::make_shared<int>(20);
+
+    std::weak_ptr<int> wp(mp);
+    std::shared_ptr<int> ssp = wp.lock();
+
+    int values[] = { 1, 2 };
+
+    //std::array<int, 4> values { 1, 2, 2, 3 };
+    //std::multiset<int> s(values.begin(), values.end());
+    //const std::pair<std::multiset<int>::iterator, std::multiset<int>::iterator> range = s.equal_range(2);
+    //for(std::multiset<int>::iterator it = range.first; it != range.second; ++it)
+    //{
+    //    std::cout << *it << std::endl;
+    //}
+    //
+    std::multimap<int, std::string> m;
+    m.insert(std::make_pair(1, "a"));
+    m.insert(std::make_pair(2, "b"));
+    m.insert(std::make_pair(3, "b1"));
+    m.insert(std::make_pair(3, "b2"));
+    m.insert(std::make_pair(3, "b3"));
+    m.insert(std::make_pair(4, "d"));
+    m.insert(std::make_pair(5, "e"));
+
+    const std::pair<std::multimap<int, std::string>::iterator, std::multimap<int, std::string>::iterator> range = m.equal_range(9);
+
+    for(std::multimap<int, std::string>::iterator it = range.first; it != range.second; ++it)
+    {
+        std::cout << "key: " << it->first << "; value: " << it->second << std::endl;
+    }
+
+}
+
 int main()
 {
+    Test();
+    /*
     std::thread worker(worker_thread);
 
     data = "Example data";
@@ -54,6 +102,7 @@ int main()
     std::cout << "Back in main(), data = " << data << '\n';
 
     worker.join();
+    */
 }
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu

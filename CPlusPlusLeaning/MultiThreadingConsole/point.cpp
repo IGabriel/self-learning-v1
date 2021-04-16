@@ -2,6 +2,8 @@
 #include <iostream>
 #include <sstream>
 #include <thread>
+#include <time.h>
+#include <locale.h>
 
 std::string point::to_string() const
 {
@@ -36,7 +38,7 @@ void point::move_on_x(const int x)
 
 void point::move(const std::function<void()> action)
 {
-    const unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+    const auto seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::default_random_engine generator(seed);
     const std::uniform_int_distribution<int> distribution(5, 10);
     int total_time = distribution(generator);
@@ -53,5 +55,38 @@ void point::move(const std::function<void()> action)
     }
 
     action();
+}
+
+bool point::operator==(const point& p) const
+{
+    return x_ == p.x_ && y_ == p.y_ && z_ == p.z_;
+}
+
+bool point::operator<(const point& p) const
+{
+    return x_ < p.x_;
+}
+
+point::~point()
+{
+    std::cout << "destroy point." << std::endl;
+}
+
+//time_point<system_clock> point4d::get_time() const
+//{
+//    return time_;
+//}
+//
+point4d::point4d()
+{
+    x_ = 0;
+    y_ = 0;
+    z_ = 0;
+    time_ = system_clock::now();
+}
+
+point4d::~point4d()
+{
+    std::cout << "destroy point4d." << std::endl;
 }
 

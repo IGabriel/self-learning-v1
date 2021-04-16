@@ -121,7 +121,23 @@ int main()
     //ThreadGuardTest();
     //thread_with_parameters();
     //thread_member_function_with_parameters();
-    condition_variable_test();
+    //condition_variable_test();
+
+    //point p1(1, 2, 3);
+    //point p2(2, 2, 3);
+
+    //if (p1 < p2)
+    //{
+    //    std::cout << "Yes! You are right." << std::endl;
+    //}
+    //else
+    //{
+    //    std::cout << "No! You are wrong." << std::endl;
+    //}
+
+    const auto now = system_clock::now();
+    const point4d p(1, 1, 1, now);
+
 
     return 0;
 }

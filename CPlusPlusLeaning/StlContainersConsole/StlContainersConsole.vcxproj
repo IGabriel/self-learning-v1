@@ -148,10 +148,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="human.cpp" />
+    <ClCompile Include="master.cpp" />
+    <ClCompile Include="slave.cpp" />
     <ClCompile Include="StlContainersConsole.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="definition.h" />
     <ClInclude Include="human.h" />
+    <ClInclude Include="master.h" />
+    <ClInclude Include="slave.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

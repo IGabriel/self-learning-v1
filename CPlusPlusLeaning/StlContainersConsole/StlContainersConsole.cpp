@@ -4,6 +4,8 @@
 #include <iostream>
 #include <vector>
 #include "human.h"
+#include "master.h"
+#include "slave.h"
 //#include <share.h>
 
 void BaseConstructorTest()
@@ -191,6 +193,12 @@ void compare_human()
     }
 }
 
+void friend_keyword_test()
+{
+    master m("felix");
+    m.go_to_work();
+}
+
 int main()
 {
     //BaseConstructorTest();
@@ -200,11 +208,13 @@ int main()
     //BaseVectorSharedPtrTest();
     //assignment_test();
     
-    return_vector_deep_copy_elements();
+    //return_vector_deep_copy_elements();
     //pass_vector_by_argument();
     //pass_vector_by_pointer();
 
     //compare_human();
+
+    friend_keyword_test();
     return 0;
 }
 

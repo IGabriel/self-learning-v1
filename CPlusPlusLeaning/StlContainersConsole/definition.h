@@ -1,7 +1,5 @@
 #pragma once
 
-#include <string>
-
 enum working_status
 {
     off_duty = 0,
@@ -10,21 +8,5 @@ enum working_status
     sleeping = 3
 };
 
-static std::string working_status_to_string(working_status status)
-{
-    switch (status)
-    {
-    case off_duty:
-        return "off duty";
-    case idle:
-        return "idle";
-    case working:
-        return "working";
-    case sleeping:
-        return "sleeping";
-    default:
-        return "unknown";
-    }
-}
-
-int get_ra
+const int working_status_min_value = 0;
+const int working_status_max_value = 3;

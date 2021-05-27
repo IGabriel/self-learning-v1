@@ -4,9 +4,7 @@
 #include <iostream>
 #include <vector>
 #include "human.h"
-#include "master.h"
-#include "slave.h"
-//#include <share.h>
+#include "labor.h"
 
 void BaseConstructorTest()
 {

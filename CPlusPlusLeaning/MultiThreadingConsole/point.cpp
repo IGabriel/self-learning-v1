@@ -82,7 +82,7 @@ point4d::point4d()
     x_ = 0;
     y_ = 0;
     z_ = 0;
-    time_ = system_clock::now();
+    //time_ = system_clock::now();
 }
 
 point4d::~point4d()

@@ -135,8 +135,8 @@ int main()
     //    std::cout << "No! You are wrong." << std::endl;
     //}
 
-    const auto now = system_clock::now();
-    const point4d p(1, 1, 1, now);
+    //const auto now = system_clock::now();
+    //const point4d p(1, 1, 1, now);
 
 
     return 0;

@@ -1,12 +1,17 @@
-﻿#include <iostream>
-#include "master.h"
+﻿#include "labor.h"
 #include "utilities.h"
+
+#include <iostream>
+
+void labor::update_status()
+{
+    status_ = static_cast<working_status>(utilities::get_random_value(working_status_min_value, working_status_max_value));
+    std::cout << "Current status: " << utilities::working_status_to_string(status_) << std::endl;
+}
 
 void labor::go_to_work()
 {
-    status_ = static_cast<working_status>(utilities::get_random_value(working_status_min_value, working_status_max_value));
-
-    std::cout << "Current status: " << utilities::working_status_to_string(status_) << std::endl;
+    update_status();
 
     if (status_ == off_duty || status_ == sleeping)
     {
